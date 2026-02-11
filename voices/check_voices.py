@@ -259,7 +259,7 @@ def get_words_from_code():
     except IOError:
         print('')
         print("**ERROR: missing resource file %s**" % ('/src/activities/lang/resource/content-' + locale + '.json'))
-        print('[Instructions to create this file](%s)' % ('https://gcompris.net/wiki/Voice_translation_Qt#Lang_word_list'))
+        print('[Instructions to create this file](%s)' % ('https://invent.kde.org/education/gcompris/-/wikis/Developers-corner/How-to-translate/Voice-translation#lang-word-list'))
         print('')
         return set()
 
@@ -287,22 +287,22 @@ def check_file_existence(filename, instructions):
 
 def get_grammar_analysis_from_code():
     '''Return nothing but tells if the required GCompris grammar_analysis/resource/grammar_analysis-<locale>.json is there'''
-    return check_file_existence('/src/activities/grammar_analysis/resource/grammar_analysis-' + locale + '.json', 'https://gcompris.net/wiki/How_to_translate#Dataset_to_translate')
+    return check_file_existence('/src/activities/grammar_analysis/resource/grammar_analysis-' + locale + '.json', 'https://invent.kde.org/education/gcompris/-/wikis/Developers-corner/How-to-translate#dataset-to-translate')
 
 
 def get_grammar_classes_from_code():
     '''Return nothing but tells if the required GCompris grammar_classes/resource/grammar_classes-<locale>.json is there'''
-    return check_file_existence('/src/activities/grammar_classes/resource/grammar_classes-' + locale + '.json', 'https://gcompris.net/wiki/How_to_translate#Dataset_to_translate')
+    return check_file_existence('/src/activities/grammar_classes/resource/grammar_classes-' + locale + '.json', 'https://invent.kde.org/education/gcompris/-/wikis/Developers-corner/How-to-translate#dataset-to-translate')
 
 
 def get_wordsgame_from_code():
     '''Return nothing but tells if the required GCompris wordsgame/resource/default-<locale>.json is there'''
-    return check_file_existence('/src/activities/wordsgame/resource/default-' + locale + '.json', 'https://gcompris.net/wiki/Word_Lists_Qt#Wordsgame_.28Typing_words.29')
+    return check_file_existence('/src/activities/wordsgame/resource/default-' + locale + '.json', 'https://invent.kde.org/education/gcompris/-/wikis/Developers-corner/How-to-translate/Words-lists#wordsgame-typing-words')
 
 
 def get_click_on_letter_from_code():
     '''Return nothing but tells if the required GCompris click_on_letter/resource/levels-<locale>.json is there'''
-    return check_file_existence('/src/activities/click_on_letter/resource/levels-' + locale + '.json', 'https://gcompris.net/wiki/How_to_translate#Dataset_to_translate')
+    return check_file_existence('/src/activities/click_on_letter/resource/levels-' + locale + '.json', 'https://invent.kde.org/education/gcompris/-/wikis/Developers-corner/How-to-translate#dataset-to-translate')
 
 
 def get_geography_on_letter_from_code(component):
@@ -343,7 +343,7 @@ def get_gletter_alphabet():
     except IOError:
         print('')
         print("**ERROR: Missing resource file %s**" % ('/src/activities/gletters/resource/default-' + locale + '.json'))
-        print('[Instructions to create this file](%s)' % ('https://gcompris.net/wiki/Word_Lists_Qt#Simple_Letters_.28Typing_letters.29_level_design'))
+        print('[Instructions to create this file](%s)' % ('https://invent.kde.org/education/gcompris/-/wikis/Developers-corner/How-to-translate/Words-lists#simple-letters-typing-letters-level-design'))
         print('')
         return set()
 
@@ -484,7 +484,7 @@ print('\n')
 check_locale_config("Locales to remove from ServerLanguageList.qml (translation level < 80%)",
                     get_translation_status_from_po_files('gcompris_teachers_qt.po'), get_locales_from_config(gcompris_qt + "/src/server/components/ServerLanguageList.qml"))
 
-print('\n[Guide to contribute recording files](%s)' % ('https://gcompris.net/wiki/Voice_translation_Qt'))
+print('\n[Guide to contribute recording files](%s)' % ('https://invent.kde.org/education/gcompris/-/wikis/Developers-corner/How-to-translate/Voice-translation'))
 
 # Calc the big list of locales we have to check
 all_locales = get_locales_from_po_files() | get_locales_from_file()
